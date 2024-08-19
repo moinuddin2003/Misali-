@@ -1,0 +1,15 @@
+.NavBar{
+    width: auto;
+    height: 60px;  
+    background-color: black;
+
+}
+.title{
+    color: aqua;
+    font-size: 25px;
+}
+.anchors{
+    color: aqua;
+    font-size: 25px;
+    margin: 130px;
+}

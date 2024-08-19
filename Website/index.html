@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar and Sidebar Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <label for="sidebarToggle" class="sidebar-button">☰ </label>
+            <h1>My Website</h1>
+        </nav>
+    </header>
+    <input type="checkbox" id="sidebarToggle" class="sidebar-checkbox">
+    <aside id="sidebar">
+        <label for="sidebarToggle" class="close-sidebar">× Close Sidebar</label>
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </aside>
+    <main id="mainContent">
+        <div id="content">
+            <h2>Main Content</h2>
+            <p>Here is the main content area of the page.</p>
+        </div>
+    </main>
+</body>
+</html>

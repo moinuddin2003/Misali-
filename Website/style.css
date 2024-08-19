@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.sidebar-checkbox {
+    display: none;
+}
+
+aside {
+    background-color: #444;
+    color: white;
+    width: 250px;
+    height: calc(100vh - 50px); /* Adjust height to fit below the navbar */
+    position: fixed;
+    top: 12%; /* Position below the header */
+    left: -200px; /* Hide sidebar initially */
+    transition: left 0.3s ease;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    display: block;
+    text-align: right;
+}
+
+.sidebar-checkbox:checked ~ aside {
+    left: 0;
+}
+
+#mainContent {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar-checkbox:checked ~ #mainContent {
+    margin-left: 250px; /* Adjust margin to accommodate the sidebar */
+    padding: 20px;
+}
