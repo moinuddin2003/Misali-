@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Council Listing</title>
+    <link rel="stylesheet" href="Union Council.css">
+</head>
+<body>
+    <div class="navbar">
+        <!-- Navbar content goes here -->
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Sidebar content goes here -->
+        </div>
+
+    <div class="main-content">
+        <div class="table-container">
+            <h2>Union Council Listing</h2>
+            <button class="btn-add">Add</button>
+            <button class="btn-import">Import</button>
+            <button class="btn-export"> Export CSV</button>
+            <table>
+                
+                    
+                <thead>
+                    <tr>
+                        <th>
+                        District Name
+                        <div class="search-filter">
+                            <input type="text" class="search-input" size= "35" placeholder="Search">
+                            <span class="filter-icon">&#x25BC;</span>
+                        </div>
+                        </th>
+                    <th>
+                        Registered Date
+                        <div class="search-filter">
+                            <input type="text" class="search-input"  size= "35" placeholder="Search">
+                            <span class="filter-icon">&#x25BC;</span>
+                        </div>
+                    </th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <tr>
+                        <td>Thatta</td>
+                        <td>10/20/2018 5:56:25 AM</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn-delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sujawal</td>
+                        <td>10/20/2018 5:56:25 AM</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Badin</td>
+                        <td>10/20/2018 5:56:25 AM</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn-delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="pagination">
+            <button class="page-btn">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <!-- Add more page buttons here -->
+            <select class="rows-per-page">
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+            </select>
+        </div>
+</body>
+</html>
