@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appuser (Marvi) Listing</title>
+    <link rel="stylesheet" href="Appuser(Marvi).css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- Navbar content goes here -->
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <!-- Sidebar content goes here -->
+      </div>
+      <div class="main-content">
+        <div class="content-1">
+          <div class="filters">
+            <div class="district">
+              District
+              <select>
+                <option>Select District</option>
+                <!-- Add more options here -->
+              </select>
+            </div>
+            <div class="taluka">
+              Taluka
+              <select size>
+                <option>Select</option>
+                <!-- Add more options here -->
+              </select>
+            </div>
+            <div class="union-council">
+              Union Council
+              <select>
+                <option>Select Union Council</option>
+                <!-- Add more options here -->
+              </select>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn search">Search</button>
+            <button class="btn reset">Reset</button>
+            <button class="btn import">Import</button>
+            <button class="btn export">Export CSV</button>
+          </div>
+        </div>
+        <div class="content-2">
+        <div class="listing-header">
+          <h2>Appuser (Marvi) Listing</h2>
+          <button class="btn add">Add</button>
+        </div>
+
+        <table class="listing-table">
+          <thead>
+            <tr>
+              <th>Name of Sepervisor LHV</th>
+              <th>Name Of Marvi Worker</th>
+              <th>Current Martial Status</th>
+              <th>Father/ Husband Name</th>
+            </tr>
+            <tr>
+              <th>
+                <input type="text" placeholder="Search..." />
+                <span class="filter-icon">🔽</span>
+              </th>
+              <th>
+                <input type="text" placeholder="Search..." />
+                <span class="filter-icon">🔽</span>
+              </th>
+              <th>
+                <input type="text" placeholder="Search..." />
+                <span class="filter-icon">🔽</span>
+              </th>
+              <th>
+                <input type="text" placeholder="Search..." />
+                <span class="filter-icon">🔽</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row -->
+            <tr>
+              <td>Gul Khatoon</td>
+              <td>Kazbano</td>
+              <td>Married</td>
+              <td>Fatah Muhammad</td>
+            </tr>
+            <!-- Add more rows here -->
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <button class="page-btn">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <select class="rows-per-page">
+            <option>10</option>
+            <option>20</option>
+            <option>50</option>
+          </select>
+        </div>
+      </div>
+    </div>
+</div>
+  </body>
+</html>
