@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+select{
+    width:200px
+}
+
+.filters>div {
+    display: flex;
+    flex-direction: column;
+    /* Stack label and select vertically */
+    margin-right: 10px;
+    /* Add space between columns */
+}
+
+.filters select,
+.filters .buttons .btn {
+    padding: 10px;
+    margin-top: 10px;
+}
+.btn
+{
+    background-color: #5867DD;
+    color: white;
+    width:10vw
+}
+
+.listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.listing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.listing-table th,
+.listing-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.listing-table thead
+{
+    background-color: #F1F1F1;
+    border: 1px solid black;
+}
+
+.listing-table th {
+    position: relative;
+}
+
+.listing-table th input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.filter-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .page-btn,
+.pagination .rows-per-page {
+    padding: 10px;
+    margin-right: 10px;
+    
+}
+
+.main-content
+{
+    background-color: #F1F1F1;
+}
+
+.content-1
+{
+    background-color: white;
+    padding: 15px;
+}
+
+.content-2
+{
+    background-color: white;
+}
+
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+} */
+
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+    /* width: 100%; */
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    bottom: 1px solid #ddd;
+}
+
+table {
+    width: 100%;    
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #5867DD;
+    color: white;
+    width: 130px;
+}
+
+.btn-import,
+.btn-export {
+    background-color: #5867DD;
+    color: white;
+    width: 130px;
+}
+
+.btn-edit {
+    background-color: #5867DD;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+districtTalluqaListingUnionCouncil
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
