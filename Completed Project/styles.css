@@ -1,0 +1,615 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ***HEADER*** */
+}
+header {
+  background-color: #c8382e;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  z-index: 1;
+  height: 13vh;
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0;
+}
+.nav {
+  display: flex;
+  /* align-items: center;
+    justify-content: space-between; */
+}
+.sno {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.sidebar-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 15px;
+  margin-right: 50px;
+}
+.picture {
+  border-radius: 0%;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+.picture-2 {
+  margin-left: 50px;
+  margin-right: 100px;
+}
+.picture-3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url(unnamed.png);
+  background-position: center;
+  background-size: cover;
+}
+.project-title {
+  width: 150px;
+  background-color: bisque;
+  margin: 20px;
+  border-radius: 10px;
+}
+.title {
+  margin: 10px;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+}
+.time {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.bell {
+  font-size: 24px;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 20px;
+}
+/* ***HEADER*** */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.dashboard {
+  padding-top: 13vh; /* Ensures content starts below the fixed header */
+  width: 90%;
+  margin: 20px auto;
+}
+main .dashboard {
+  margin-left: calc(
+    350px
+  ); /* Original margin to fit the full sidebar plus padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(90% - 250px - 10px); /* Full width minus the sidebar width */
+}
+#check:checked ~ main .dashboard {
+  margin-left: calc(
+    100px
+  ); /* Adjust margin to make space for the sidebar and padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(
+    100% - 60px - 10px
+  ); /* Shrink main content width to fit within the page */
+}
+#check:checked ~ .container {
+  max-width: 60px; /* Width of the sidebar when open */
+  padding-right: 5px; /* Space between sidebar and main content */
+}
+.summary {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.summary-box {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 20px;
+  text-align: center;
+  flex: 1 0 15%;
+  margin-right: 10px;
+}
+.summary-box:last-child {
+  margin-right: 0;
+}
+.summary-box h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+}
+.summary-box p {
+  font-size: 18px;
+  color: #000;
+  margin: 10px 0 0;
+}
+.project-details {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+.project-details h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+.add-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.add-button:hover {
+  background-color: #0056b3;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+  height: 60vh;
+}
+td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+td a {
+  color: #007bff;
+  text-decoration: none;
+}
+td a:hover {
+  text-decoration: underline;
+}
+.container {
+  width: 45vh; /* Sidebar width */
+  height: 100vh; /* Full viewport height */
+  padding-right: 10px;
+  background: black;
+  box-shadow: 0 0 5px rgba(140, 135, 135, 0.3);
+  position: fixed; /* Keeps the sidebar fixed */
+  z-index: 100; /* Lower z-index to stay below the navbar */
+  top: 13vh; /* Positions the sidebar just below the navbar */
+  left: 0; /* Sidebar starts at the left */
+  transition: 0.3s ease-in-out;
+}
+.container .box {
+  position: relative;
+  height: 15vh;
+  width: 90;
+  margin: 10px;
+  border: 2px;
+  background-color: #333;
+  z-index: -1;
+}
+.dashboard-title {
+  text-align: center;
+}
+#check:checked ~ .container .box p {
+  transform: scale(0);
+}
+.container .box i {
+  margin: auto 0;
+  font-size: 20px;
+  width: 70px;
+  text-align: center;
+}
+.container .box a {
+  width: 100%;
+  display: inline-flex;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: grey;
+  padding: 5px 8px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.container .sidebar li {
+  width: 100%;
+  display: inline-flex;
+  margin: 5px 0;
+}
+.container .sidebar li a {
+  width: 100%;
+  display: inline-flex;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: grey;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+.container .sidebar li:hover a {
+  background: lightgray;
+  color: white;
+}
+.container .sidebar li a i {
+  margin: auto 0;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+}
+.container .sidebar li a p {
+  font-size: 20px;
+  transform: scale(1);
+  transform-origin: left;
+  transition: 0.3s;
+}
+#check:checked ~ .container .sidebar li a p {
+  transform: scale(0);
+}
+.hide {
+  display: none;
+  visibility: hidden;
+}
+.container label #arrow {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  right: -15px;
+  font-size: 25px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  top: 100px;
+  transition: 0.3s;
+}
+#check:checked ~ .container label #arrow {
+  transform: rotate(180deg);
+}
+#check:checked ~ .container {
+  max-width: 60px;
+}
+/* ALL-PAGES CSS
+************************* */
+main .Content-Container {
+  margin-left: calc(
+    350px
+  ); /* Original margin to fit the full sidebar plus padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(90% - 250px - 10px); /* Full width minus the sidebar width */
+}
+#check:checked ~ main .Content-Container {
+  margin-left: calc(
+    100px
+  ); /* Adjust margin to make space for the sidebar and padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(
+    100% - 60px - 10px
+  ); /* Shrink main content width to fit within the page */
+}
+#check:checked ~ .container {
+  max-width: 60px; /* Width of the sidebar when open */
+  padding-right: 5px; /* Space between sidebar and main content */
+}
+.Content-Container {
+  padding-top: 10vh;
+  width: 90%;
+  margin: 20px auto;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+select {
+  width: 200px;
+}
+.filters > div {
+  display: flex;
+  flex-direction: column;
+  /* Stack label and select vertically */
+  margin-right: 10px;
+  /* Add space between columns */
+}
+.filters select,
+.filters .buttons .btn {
+  padding: 10px;
+  margin-top: 10px;
+}
+.btn {
+  background-color: #5867dd;
+  color: white;
+  width: 10vw;
+}
+
+.listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.listing-table th,
+.listing-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+.listing-table thead {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+}
+
+.listing-table th {
+  position: relative;
+}
+
+.listing-table th input[type="text"] {
+  width: 80%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.filter-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .page-btn,
+.pagination .rows-per-page {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.main-content {
+  background-color: #f1f1f1;
+}
+
+.content-1 {
+  background-color: white;
+  padding: 15px;
+}
+
+.content-2 {
+  background-color: white;
+}
+
+.main-content {
+  margin-left: 200px;
+  margin-top: 60px;
+  padding: 20px;
+  /* width: 100%; */
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.table-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  bottom: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #5867dd;
+  color: white;
+  width: 130px;
+}
+.btn-import,
+.btn-export {
+  background-color: #5867dd;
+  color: white;
+  width: 130px;
+}
+.btn-edit {
+  background-color: #5867dd;
+  color: white;
+}
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.districtTalluqaListingUnionCouncil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ALL-PAGES CSS
+  ************************* */
+/* DASHBOARD-2
+************************** */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+main .dashboard-container {
+  margin-left: calc(
+    350px
+  ); /* Original margin to fit the full sidebar plus padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(90% - 250px - 10px); /* Full width minus the sidebar width */
+}
+#check:checked ~ main .dashboard-container {
+  margin-left: calc(
+    100px
+  ); /* Adjust margin to make space for the sidebar and padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(
+    100% - 60px - 10px
+  ); /* Shrink main content width to fit within the page */
+}
+#check:checked ~ .container {
+  max-width: 60px; /* Width of the sidebar when open */
+  padding-right: 5px; /* Space between sidebar and main content */
+}
+.dashboard-container {
+  width: 90%;
+  margin: 20px auto;
+}
+.dashboard-title {
+  color: grey;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.card {
+  background-color: white;
+  width: 16%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+.card-value {
+  font-size: 24px;
+  margin: 5px 0 0 0;
+  color: #e53935;
+}
+.dashboard-table-container {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.table-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+.table-controls {
+  display: flex;
+  margin-bottom: 20px;
+}
+.date-picker,
+.region-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 150px;
+}
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}
+.btn-submit {
+  background-color: #3b78e7;
+  margin: 40px;
+}
+.btn-clear {
+  background-color: #3b78e7;
+  margin: 40px;
+}
+.btn-export {
+  background-color: #3b78e7;
+  margin: 40px;
+}
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.dashboard-table th,
+.dashboard-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
+.dashboard-table th {
+  background-color: #3b78e7;
+  color: white;
+}
+.dashboard-table td {
+  background-color: #f9f9f9;
+}
+/* DASHBOARD-2
+  ************************** */

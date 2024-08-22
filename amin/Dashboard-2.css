@@ -1,0 +1,133 @@
+/* DASHBOARD-2
+************************** */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+main .dashboard-container {
+  margin-left: calc(
+    350px
+  ); /* Original margin to fit the full sidebar plus padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(90% - 250px - 10px); /* Full width minus the sidebar width */
+}
+#check:checked ~ main .dashboard-container {
+  margin-left: calc(
+    100px
+  ); /* Adjust margin to make space for the sidebar and padding */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  max-width: calc(
+    100% - 60px - 10px
+  ); /* Shrink main content width to fit within the page */
+}
+#check:checked ~ .container {
+  max-width: 60px; /* Width of the sidebar when open */
+  padding-right: 5px; /* Space between sidebar and main content */
+}
+.dashboard-container {
+  width: 90%;
+  margin: 20px auto;
+}
+.dashboard-title {
+  color: grey;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.card {
+  background-color: white;
+  width: 16%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+.card-value {
+  font-size: 24px;
+  margin: 5px 0 0 0;
+  color: #e53935;
+}
+.dashboard-table-container {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.table-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+.table-controls {
+  display: flex;
+  margin-bottom: 20px;
+}
+.date-picker,
+.region-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 150px;
+}
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}
+.btn-submit {
+  background-color: #3b78e7;
+  margin: 40px;
+}
+.btn-clear {
+  background-color: #3b78e7;
+  margin: 40px;
+}
+.btn-export {
+  background-color: #3b78e7;
+  margin: 40px;
+}
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.dashboard-table th,
+.dashboard-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
+.dashboard-table th {
+  background-color: #3b78e7;
+  color: white;
+}
+.dashboard-table td {
+  background-color: #f9f9f9;
+}
+/* DASHBOARD-2
+************************** */

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- 
+/* ***HEADER*** */
 }
 header {
     background-color: #c8382e;
@@ -11,6 +11,8 @@ header {
     padding: 10px;
     z-index: 1;
     height: 13vh;
+    position: fixed; /* Keeps the header fixed at the top */
+    top:0;
 }
 .nav {
     display: flex;
@@ -82,6 +84,8 @@ header {
     margin-left: 100px;
     margin-right: 20px;
 }
+/* ***HEADER*** */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -89,6 +93,8 @@ body {
     background-color: #fff;
 }
 .dashboard {    
+    padding-top: 13vh; /* Ensures content starts below the fixed header */
+
     width: 90%;
     margin: 20px auto;
 }
@@ -187,16 +193,17 @@ td a:hover {
 }
 
 
-.container{
-    width: 100vh;
+.container {
+    width: 45vh; /* Sidebar width */
+    height: 100vh; /* Full viewport height */
     padding-right: 10px;
-    min-height: 100vh;
-    max-width: 45vh;
     background: black;
     box-shadow: 0 0 5px rgba(140, 135, 135, 0.3);
-    position: absolute;
-    z-index: 1;
-    transition: 0.3s ease-in-out ;
+    position: fixed; /* Keeps the sidebar fixed */
+    z-index: 100; /* Lower z-index to stay below the navbar */
+    top: 13vh; /* Positions the sidebar just below the navbar */
+    left: 0; /* Sidebar starts at the left */
+    transition: 0.3s ease-in-out;
 }
 .container .box {
     position: relative;
